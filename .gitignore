@@ -6,3 +6,4 @@ images/
 venv/
 models/
 *.pkl
+chrono_scraping_testing.ipynb
