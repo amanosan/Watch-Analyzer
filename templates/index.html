@@ -36,8 +36,9 @@
 			{% endif %}
 			<hr />
 			<!-- Predictions -->
+			{% if predictions %}
 			<p class="prediction">Brand Predictions:</p>
-			{% for prediction in predictions %}
+			{% endif %} {% for prediction in predictions %}
 			<p class="prediction">
 				{{ prediction[0] }} -- {{ prediction[1] * 100 }}%
 			</p>
