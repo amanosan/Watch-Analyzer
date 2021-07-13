@@ -4,6 +4,4 @@ __pycache__/
 *.exe
 images/
 venv/
-models/
-*.pkl
 chrono_scraping_testing.ipynb
