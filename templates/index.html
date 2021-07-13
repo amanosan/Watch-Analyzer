@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>ChronoAnalyzer</title>
+		<link
+			rel="stylesheet"
+			href="{{ url_for('static', filename='styles.css') }}"
+		/>
+		<script
+			src="https://kit.fontawesome.com/682bf1a3ff.js"
+			crossorigin="anonymous"
+		></script>
+	</head>
+	<body>
+		<div class="content">
+			<h1><a href="/">ChronoAnalyzer</a></h1>
+			<p class="watchlist__content">
+				AudemarsPiguet - Breitling - Cartier - Gucci - IWC - JaegerLeCoultre -
+				Movado - Omega - Panerai - PatekPhilippe - Rolex - Seiko - Zenith
+			</p>
+
+			<form action="/prediction" method="POST" , enctype="multipart/form-data">
+				<input type="file" name="imgFile" class="fileBtn" />
+				<input type="submit" value="Submit" class="submitBtn" />
+			</form>
+			{% if message %}
+			<p class="message">{{message | safe}}</p>
+			{% endif %}
+			<!-- Price Prediction -->
+			{% if prediction_price%}
+			<p class="prediction">Price Prediction:</p>
+			<p class="prediction">$ {{prediction_price | safe}}</p>
+			{% endif %}
+			<hr />
+			<!-- Predictions -->
+			<p class="prediction">Brand Predictions:</p>
+			{% for prediction in predictions %}
+			<p class="prediction">
+				{{ prediction[0] }} -- {{ prediction[1] * 100 }}%
+			</p>
+			{% endfor %}
+			<!-- <div class="icon">
+					<i class="fas fa-cloud-upload-alt"></i>
+				</div>
+				<header>Drag & Drop to Uplaod File</header>
+				<span>OR</span>
+				<button class="browseBtn">Browse File</button>
+
+				<input type="file" name="imgFile" hidden />
+			</div>
+			<button type="submit" value="Submit" onclick="move_forward()">
+				Predict
+			</button> -->
+		</div>
+		<!-- Adding JS script -->
+		<!-- <script
+			type="text/javascript"
+			src="{{ url_for('static', filename='script.js') }}"
+		></script> -->
+	</body>
+</html>

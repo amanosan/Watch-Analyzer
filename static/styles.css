@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap");
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	background: #2b2e4a;
+	font-family: "Roboto", sans-serif;
+}
+
+.content {
+	margin-top: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+a {
+	color: #fff;
+	text-decoration: none;
+}
+h1 {
+	color: #fff;
+	margin-bottom: 0;
+}
+
+.watchlist__content {
+	font-size: 15px;
+	color: #fff;
+	font-weight: 100;
+	margin-bottom: 50px;
+}
+
+form {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+input {
+	margin: 10px;
+}
+
+.message {
+	color: #fff;
+	font-weight: 400;
+	font-size: 20px;
+}
+
+.prediction {
+	color: #fff;
+	font-weight: 300;
+	font-size: 20px;
+	padding: 0;
+	margin: 0;
+	text-transform: capitalize;
+}
+
+.fileBtn::file-selector-button {
+	background-color: #2b2e4a;
+	color: #fff;
+	border: 2px solid #fff;
+	border-radius: 5px;
+	padding: 5px 10px;
+	margin-right: 5px;
+	cursor: pointer;
+}
+.fileBtn::file-selector-button:hover {
+	background-color: #fff;
+	color: #2b2e4a;
+}
+.fileBtn {
+	color: #fff;
+	padding: 5px;
+	border: 2px solid #fff;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.submitBtn {
+	background-color: #2b2e4a;
+	border: 2px solid #fff;
+	color: #fff;
+	border-radius: 5px;
+	padding: 5px 10px;
+	cursor: pointer;
+}
+.submitBtn:hover {
+	background-color: #fff;
+	color: #2b2e4a;
+}
